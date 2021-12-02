@@ -1,3 +1,4 @@
+// Manipulation Element
 // 1. element.innerHTML
 // const judul = document.getElementById('judul')
 // judul.innerHTML = "<em>Abu Abdirohman</em>"
@@ -13,7 +14,7 @@
 //      element.removetAttribute()
 
 const judul = document.getElementsByTagName('h1')[0]
-judul.setAttribute('name', 'abuAbdirohman')
+judul.setAttribute('name', 'ab uAbdirohman')
 
 // Cari tau isi attribute dengan getAttribute
 judul.getAttribute('name')

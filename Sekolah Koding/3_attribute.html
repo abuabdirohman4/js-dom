@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM Javascript - SekolahKoding</title>
+    <style>
+        .merah{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Belajar Attribute DOM</h1>
+    <img src="xenocode.png" alt="Logo Xenocode" id="gambar" width="300">
+
+    <input type="text" id="input" value="Nama Anda" style="display: block;">
+
+    <script>
+        let img = document.getElementById('gambar');
+        img.width = 400;
+
+        img.setAttribute('class', 'merah')
+
+        let input = document.getElementById('input');
+        input.value = "Nama Lengkap";
+
+    </script>    
+
+</body>
+</html>

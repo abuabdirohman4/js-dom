@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM Javascript - SekolahKoding</title>
+</head>
+
+<body>
+    <h1>Testimonial</h1>
+
+    <div class="testi">
+        <div class="header" style="display: flex; justify-content: space-between;">
+            <img class="image" src="xenocode.png" alt="" width="100">
+            <div class="cite">
+                <b>Xenocode</b>
+                <p>Startup</p>
+            </div>
+            <div class="icon">Icon</div>
+        </div>
+        <div class="header" style="display: flex; justify-content: space-between;">
+            <img class="image" src="xenocode.png" alt="" width="100">
+            <div class="cite">
+                <b>Seno</b>
+                <p>Coba 2</p>
+            </div>
+            <div class="icon">Nico</div>
+        </div>
+        <div class="header" style="display: flex; justify-content: space-between;">
+            <img class="image" src="xenocode.png" alt="" width="100">
+            <div class="cite">
+                <b>Abu Abdirohman</b>
+                <p>Percobaan</p>
+            </div>
+            <div class="icon">Coni</div>
+        </div>
+    </div>
+
+    <script>
+        let number = 2
+        // let testi = document.querySelector(".testi .header:nth-child(2)")
+        let testi = document.querySelectorAll(".testi .header")
+        // let testi = document.querySelector('.testi .header:nth-child(', number, ")'")
+        // console.log(testi)
+
+        let i = testi.length-1
+        while (i >= 0) {
+            // console.log("hello")
+            // console.log("ini testi", i, testi[i])
+            const image = testi[i].querySelector(".image")
+            const cite = testi[i].querySelector(".cite")
+            console.log("image :",image)
+            console.log("cite :", cite)
+            testi[i].insertBefore(cite, image)
+            i--
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM Javascript - SekolahKoding</title>
+    <style>
+        .merah {
+            background-color: red;
+        }
+
+        .black {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body onload="alert('Selamat Datang')">
+
+    <h1>Event DOM</h1>
+    <img onclick="change()" src="xenocode.png" alt="Logo Xenocode" id="gambar" width="300">
+
+    <input type="text" id="input" value="Nama Anda" style="display: block;">
+
+    <script>
+        let img = document.getElementById('gambar');
+        img.width = 400;
+
+        // img.setAttribute('class', 'merah')
+        img.className = "merah";
+        img.className += " black";
+
+        let input = document.getElementById('input');
+        input.value = "Nama Lengkap";
+
+        input.style.border = "2px solid blue";
+        input.style.fontSize = "14px";
+
+        // EVENT
+        // 1. Cara Pertama dengan menuliskan terlebih dahulu onclick pada tag img nya
+        function change() {
+            img.style.backgroundColor = "white";
+        }
+
+        // 2. Cara Kedua dengan tanpa perlu menulis onclik pada tag img
+            // 2.1 Cara Ribet
+        // input.onclick = function () {
+        //     changeInput() 
+        // };
+        
+            // 2.2 Cara Lebih Simpel
+        // function changeInput() {
+        //     input.style.fontSize = "20px";
+        // }
+
+        input.onclick = function () {
+            input.style.fontSize = "20px";
+        };
+
+        // 3. Menggunakan Event Listener
+        input.addEventListener('mouseenter', function () {
+            input.style.backgroundColor = "red";
+        })
+
+        input.addEventListener('mouseleave', function () {
+            input.style.backgroundColor = "yellow";
+        })
+
+    </script>
+
+</body>
+
+</html>

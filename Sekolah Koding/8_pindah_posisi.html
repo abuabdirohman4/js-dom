@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM Javascript - SekolahKoding</title>
+</head>
+
+<body>
+    <h1>Slektor Luar Biasa</h1>
+    <div id="box1"></div>
+
+    <div class="boxes"></div>
+    <div class="boxes"></div>
+    <div class="boxes"></div>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ul>
+
+    <div id="id1">
+        <div id="id2">
+          <p>ID 2</p>
+          <span>maybe some more</span>
+        </div>
+        <div id="id3">
+          <p>ID 3</p>
+          <span>maybe even a form item</span>
+        </div>
+      </div>
+
+    <script>
+        
+        let javascript = document.querySelector("ul li:nth-child(3)")
+        console.log(javascript)
+        let html = document.querySelector("ul li:nth-child(1)")
+        console.log(html)
+
+        let ul = document.getElementsByTagName("ul")[0]
+        console.log(ul)
+
+        // ul.appendChild(html)
+        // document.getElementsByTagName("ul")[0].appendChild(document.querySelector("ul li:nth-child(1)"))
+
+        // ul.insertBefore(html, javascript)
+
+        // document.getElementById('id1').appendChild(document.getElementById('id2'));
+
+    </script>
+
+</body>
+
+</html>

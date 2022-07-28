@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM Javascript - SekolahKoding</title>
+    <style>
+        .merah {
+            background-color: red;
+        }
+
+        .black {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body onload="">
+
+    <h1>Event DOM</h1>
+    <img src="xenocode.png" alt="Logo Xenocode" id="gambar" width="300">
+    <input type="text" id="input" value="Nama Anda">
+    <input type="submit" id="submit">
+    <p>Nama Saya Adalah </p><span id="span"></span>
+    
+
+    <script>
+        let img = document.getElementById('gambar');
+        img.width = 400;
+
+        // img.setAttribute('class', 'merah')
+        img.className = "merah";
+        img.className += " black";
+
+        let input = document.getElementById('input');
+        input.value = "Nama Lengkap";
+
+        input.style.border = "2px solid blue";
+        input.style.fontSize = "14px";
+
+        // EVENT
+        function change() {
+            img.style.backgroundColor = "white";
+        }
+        function changeInput() {
+            input.style.fontSize = "20px";
+        }
+
+        img.onclick = change;
+
+        // Penggunaan Event Listener lebih simpel
+        input.addEventListener('mouseenter', changeInput);
+
+        input.addEventListener('mouseleave', function () {
+            input.style.fontSize = "10px";
+        })
+
+        let submit = document.getElementById('submit');
+        let span = document.getElementById('span');
+
+        submit.onclick = function () {
+            let text = input.value;
+            span.innerHTML = text;
+        }
+
+    </script>
+
+</body>
+
+</html>

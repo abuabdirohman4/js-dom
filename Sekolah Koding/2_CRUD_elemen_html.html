@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DOM Javascript - SekolahKoding</title>
+</head>
+<body>
+    <div id="box1">
+        <div id="p1">Paragraf 1</div>
+    </div>
+
+    <script>
+        // Menambahkan Elemen
+        let el = document.createElement('h2');
+        let text = document.createTextNode('Belajar DOM');
+        let box = document.getElementById('box1');
+
+        el.appendChild(text);
+        box.appendChild(el);
+
+        // Mengahapus Elemen
+        // box.removeChild(el);
+
+        // Mengedit Elemen
+        let el2 = document.createElement('h3');
+        let text2 = document.createTextNode('CRUD DOM Elemen');
+        el2.appendChild(text2);
+
+        let p1 = document.getElementById('p1');
+        box.replaceChild(el2, p1);
+
+    </script>
+</body>
+</html>
